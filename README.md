@@ -1,2 +1,2 @@
-# The_Intrinsic_Limiation_of_ShimCoils_Capability
-This project is for measuring the intrinsic limitation of shim coils capability. 
+# Off Resonance Fields
+This project is for calculating off resonance fields by the main program, off_resonance.m. 
