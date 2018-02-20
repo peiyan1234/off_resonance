@@ -9,7 +9,7 @@ d05548014@ntu.edu.tw
 This README file decribes the process from a measured raw data to an example of final results.
 
 Processing enviroments: 
-1. Matlab (R2015a), 
+1. Matlab (R2015a, at MAC/Win10, https://www.mathworks.com/?s_tid=gn_logo), 
 2. FSL toobox (at MAC/Linux, https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), 
 3. Freesurfer toobox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
