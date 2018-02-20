@@ -1,8 +1,8 @@
 # The Intrinsic Limitation of Shim Coils Capability
 
 Written by:
-Pei-Yan, Li
-Institude of Biomedical Engineering, National Taiwan University
+Pei-Yan, Li.
+Institude of Biomedical Engineering, National Taiwan University.
 d05548014@ntu.edu.tw
 
 This README file decribes the process from a measured raw data to an example of final results.
