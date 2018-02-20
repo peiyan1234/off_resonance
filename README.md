@@ -2,7 +2,7 @@
 
 Written by:
 Pei-Yan, Li.
-Institude of Biomedical Engineering, 
+Institute of Biomedical Engineering, 
 National Taiwan University.
 d05548014@ntu.edu.tw
 
