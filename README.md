@@ -14,18 +14,18 @@ Processing environments:
 3. Freesurfer toolbox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
 Step 1
-@ Linux/MAC/Win10, Matlab
+>> %@ Linux/MAC/Win10, Matlab
 >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0);
-where meas_sample_AdjGre.dat can be download at here: URL
+>> %where meas_sample_AdjGre.dat can be download at here: URL
 
 Step 2
-@ Linux/MAC, using FSL toolbox
+>> %@ Linux/MAC, using FSL toolbox
 >> bet magnitude_image.nii magnitude_image_bet_Af01mt -A -f 0.1 -m -t
-@ Linux, using Freesurfer toolbox
+>> %@ Linux, using Freesurfer toolbox
 >> mri_convert magnitude_image_bet_Af01mt_mask.nii.gz big_mask.nii
 
 Step 3
-@ MAC/Win10/Linux, Matlab
+>> %@ MAC/Win10/Linux, Matlab
 >> off_resonance(0,'meas_sample_AdjGre',32,0.002,0.00446,1,0,1);
 
 Step 4
