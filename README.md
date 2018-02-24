@@ -30,7 +30,7 @@ Step 3
 
 Step 4
 1. @ Linux/MAC, using FSL toolbox
-2. bet magnitude_image_bet_Af01mt.nii.gz magnitude_image_bet_Af01mt_Bf025g0mt -B -f 0.25 -g 0 -m -t
+2. >> bet magnitude_image_bet_Af01mt.nii.gz magnitude_image_bet_Af01mt_Bf025g0mt -B -f 0.25 -g 0 -m -t
 3. >> flirt -in MNI305_T1_1mm.nii -ref MNI305_T1_2mm.nii -omat magnitude_image_bet_Af01mt_2stepflirt1.mat -bins 1024 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
 4. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -ref MNI305_T1_1mm.nii -omat magnitude_image_bet_Af01mt_2stepflirt2.mat -bins 1024 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
 5. >> convert_xfm -concat magnitude_image_bet_Af01mt_2stepflirt1.mat -omat magnitude_image_bet_Af01mt_2stepflirt.mat magnitude_image_bet_Af01mt_2stepflirt2.mat
