@@ -14,9 +14,9 @@ Processing environments:
 3. Freesurfer toolbox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
 Step 1
->> %@ Linux/MAC/Win10, Matlab
->> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0);
->> %where meas_sample_AdjGre.dat can be download at here: URL
+1. @ Linux/MAC/Win10, Matlab
+2. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0);
+  where meas_sample_AdjGre.dat can be download at here: URL
 
 Step 2
 >> %@ Linux/MAC, using FSL toolbox
