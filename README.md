@@ -16,7 +16,7 @@ Processing environments:
 Step 1
 1. @ Linux/MAC/Win10, Matlab
 2. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0);
-  where meas_sample_AdjGre.dat can be download at here: URL
+3. where meas_sample_AdjGre.dat can be download at here: URL
 
 Step 2
 >> %@ Linux/MAC, using FSL toolbox
