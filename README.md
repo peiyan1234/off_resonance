@@ -37,9 +37,11 @@ Step 4
 6. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -ref MNI305_T1_2mm.nii -out magnitude_image_bet_Af01mt_2stepflirt.nii.gz -applyxfm -init magnitude_image_bet_Af01mt_2stepflirt.mat -interp trilinear
 7. >> flirt -in magnitude_image_bet_Af01mt_Bf025g0mt.nii.gz -applyxfm -init magnitude_image_bet_Af01mt_2stepflirt.mat -out magnitude_image_bet_Af01mt_Bf025g0mt_2stepflirt.nii.gz -paddingsize 0.0 -interp trilinear -ref MNI305_T1_2mm.nii
 8. >> flirt -in magnitude_image_bet_Af01mt_Bf025g0mt_mask.nii.gz -applyxfm -init magnitude_image_bet_Af01mt_2stepflirt.mat -out magnitude_image_bet_Af01mt_Bf025g0mt_mask_2stepflirt.nii.gz -paddingsize 0.0 -interp trilinear -ref MNI305_T1_2mm.nii
-9. @ Linux, using Freesurfer toolbox
-10. >> mri_convert magnitude_image_bet_Af01mt_2stepflirt.nii.gz T1_2mm.nii
-11. >> mri_convert magnitude_image_bet_Af01mt_Bf025g0mt_mask_2stepflirt.nii.gz small_mask.nii
+9. >> flirt -in Fieldmap.nii -applyxfm -init magnitude_image_bet_Af01mt_2stepflirt.mat -out Fieldmap_mni305.nii -paddingsize 0.0 -interp trilinear -ref MNI305_T1_2mm.nii
+10. @ Linux, using Freesurfer toolbox
+11. >> mri_convert magnitude_image_bet_Af01mt_2stepflirt.nii.gz T1_2mm.nii
+12. >> mri_convert magnitude_image_bet_Af01mt_Bf025g0mt_mask_2stepflirt.nii.gz small_mask.nii
+13. >> mri_convert Fieldmap_mni305.nii.gz Fieldmap_mni305.nii
 
 Step 5
 1. @ Linux/MAC/Win10, Matlab
