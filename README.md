@@ -14,7 +14,7 @@ Processing environments:
 3. Freesurfer toolbox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
 Step 1
-1. meas_sample_AdjGre.dat can be download at here: URL
+1. meas_sample_AdjGre.dat can be downloaded at here: URL
 2. @ Linux/MAC/Win10, Matlab
 3. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0); 
 
@@ -27,6 +27,31 @@ Step 2
 Step 3
 1. @ Linux/MAC/Win10, Matlab
 2. >> off_resonance(0,'meas_sample_AdjGre',32,0.002,0.00446,1,0,1);
+
+Step 4
+1. MPRAGE_sample can be downloaded at here: URL
+2. @ Linux/MAC, using Freesurfer toolbox
+3. recon-all -all -i sample.0001.IMA -subject subject_recon
+4. mri_convert subject_recon/mri/T1.mgz T1.nii
+
+Step 5
+1. @ Linux/MAC, using FSL toolbox
+2. flirt -in MNI305_1mm.nii -ref MNI305_2mm.nii -omat subject_T1_2stepflirt1.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
+3. flirt -in T1.nii -ref MNI305_1mm.nii -omat subject_T1_2stepflirt2.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
+4. convert_xfm -concat subject_T1_2stepflirt1.omat -omat subject_T1_2stepflirt.mat subject_T1_2stepflirt2.mat
+5. flirt -in T1.nii -ref MNI305_2mm.nii -out subject_T1_2stepflirt.nii -applyxfm -init subject_T1_2stepflirt.mat -interp trilinear
+6. flirt -in magnitude_image_bet_Af01mt.nii.gz -ref subj1_T1_2stepflirt.nii.gz -out magnitude_image_bet_Af01mt_mni305.nii.gz -omat magnitude_image_bet_Af01mt_mni305.mat -bins 1024 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
+7. flirt -in Fieldmap.nii -applyxfm -init magnitude_image_bet_Af01mt_mni305.mat -out Fieldmap_mni305.nii -paddingsize 0.0 -interp trilinear -ref MNI305_2mm.nii
+
+
+
+
+
+
+
+
+
+
 
 Step 4
 1. @ Linux/MAC, using FSL toolbox
