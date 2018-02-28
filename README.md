@@ -10,8 +10,8 @@ This README file decribes the process from a measured raw data to an example of 
 
 Processing environments: 
 1. Matlab (R2015a, at Linux/MAC/Win10, https://www.mathworks.com/?s_tid=gn_logo), 
-2. FSL toolbox (at Linux/MAC, https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), 
-3. Freesurfer toolbox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
+2. FSL toolbox (FSL 5.0.10, at Linux/MAC, https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), 
+3. Freesurfer toolbox (centos4_x86_64-stable-v4.0.2-20071215, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
 Step 1
 1. meas_sample_AdjGre.dat can be downloaded at here: https://goo.gl/aotPQr
