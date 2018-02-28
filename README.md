@@ -14,7 +14,7 @@ Processing environments:
 3. Freesurfer toolbox (at Linux, https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki)
 
 Step 1
-1. meas_sample_AdjGre.dat can be downloaded at here: URL
+1. meas_sample_AdjGre.dat can be downloaded at here: https://goo.gl/aotPQr
 2. @ Linux/MAC/Win10, Matlab
 3. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0); 
 
@@ -29,7 +29,7 @@ Step 3
 2. >> off_resonance(0,'meas_sample_AdjGre',32,0.002,0.00446,1,0,1);
 
 Step 4
-1. MPRAGE_sample can be downloaded at here: URL
+1. MPRAGE_sample (#0001~#0192) can be downloaded at here: https://goo.gl/aotPQr
 2. @ Linux/MAC, using Freesurfer toolbox
 3. >> recon-all -all -i sample.0001.IMA -subject subject_recon
 4. >> mri_convert subject_recon/mri/T1.mgz T1.nii
