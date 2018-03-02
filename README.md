@@ -51,4 +51,21 @@ Step 5
 
 Step 6
 1. @ Linux/MAC/Win10, Matlab
-2. >> 
+2. >> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask',9:-2:3,1)
+3. 
+>> load('Fieldmap_brain.mat')
+>> load('Fieldmap_purified.mat')
+>> load('Poisson_piece.mat')
+>> structure=MRIread(sprintf('%s.nii','T1_2mm'));
+>> figure;imagesc(squeeze(structure.vol(:,:,50)));colormap(jet);title('T1-wighted structure image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_brain(:,:,50)));colormap(jet);title('Original image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_purified(:,:,50)));colormap(jet);title('Purified image');axis equal
+>> figure;imagesc(squeeze(Poisson_piece(:,:,50)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(structure.vol(:,44,:)));colormap(jet);title('T1-wighted structure image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_brain(:,44,:)));colormap(jet);title('Original image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_purified(:,44,:)));colormap(jet);title('Purified image');axis equal
+>> figure;imagesc(squeeze(Poisson_piece(:,44,:)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(structure.vol(44,:,:)));colormap(jet);title('T1-wighted structure image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_brain(44,:,:)));colormap(jet);title('Original image');axis equal
+>> figure;imagesc(squeeze(Fieldmap_purified(44,:,:)));colormap(jet);title('Purified image');axis equal
+>> figure;imagesc(squeeze(Poisson_piece(44,:,:)));colormap(jet);title('Intrinsic limit image');axis equal
