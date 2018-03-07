@@ -55,21 +55,45 @@ Step 5
 
 Step 6
 1. @ Linux/MAC/Win10, Matlab
-2. >> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask',9:-2:3,1)
-3. 
+2. >> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask',9:-2:3)
+3.
 >> load('Fieldmap_brain.mat')
->> load('Fieldmap_purified.mat')
->> load('Poisson_piece.mat')
+>> load('oROI_vSHARP.mat')
+>> load('iROI_vSHARP.mat')
+>> load('oROI_LBV.mat')
+>> load('iROI_LBV.mat')
+>> load('oROI_RESHARP.mat')
+>> load('iROI_RESHARP.mat')
+>> load('oROI_PDF.mat')
+>> load('iROI_PDF.mat')
 >> structure=MRIread(sprintf('%s.nii','T1_2mm'));
 >> figure;imagesc(squeeze(structure.vol(:,:,50)));colormap(jet);title('T1-wighted structure image');axis equal
 >> figure;imagesc(squeeze(Fieldmap_brain(:,:,50)));colormap(jet);title('Original image');axis equal
->> figure;imagesc(squeeze(Fieldmap_purified(:,:,50)));colormap(jet);title('Purified image');axis equal
->> figure;imagesc(squeeze(Poisson_piece(:,:,50)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_vSHARP(:,:,50)));colormap(jet);title('oROI vSHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_vSHARP(:,:,50)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_LBV(:,:,50)));colormap(jet);title('oROI LBV image');axis equal
+>> figure;imagesc(squeeze(iROI_LBV(:,:,50)));colormap(jet);title('iROI LBV Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_RESHARP(:,:,50)));colormap(jet);title('oROI RESHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_RESHARP(:,:,50)));colormap(jet);title('iROI RESHARP Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_PDF(:,:,50)));colormap(jet);title('oROI PDF image');axis equal
+>> figure;imagesc(squeeze(iROI_PDF(:,:,50)));colormap(jet);title('iROI PDF Intrinsic limit image');axis equal
 >> figure;imagesc(squeeze(structure.vol(:,44,:)));colormap(jet);title('T1-wighted structure image');axis equal
 >> figure;imagesc(squeeze(Fieldmap_brain(:,44,:)));colormap(jet);title('Original image');axis equal
->> figure;imagesc(squeeze(Fieldmap_purified(:,44,:)));colormap(jet);title('Purified image');axis equal
->> figure;imagesc(squeeze(Poisson_piece(:,44,:)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_vSHARP(:,44,:)));colormap(jet);title('oROI vSHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_vSHARP(:,44,:)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_LBV(:,44,:)));colormap(jet);title('oROI LBV image');axis equal
+>> figure;imagesc(squeeze(iROI_LBV(:,44,:)));colormap(jet);title('iROI LBV Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_RESHARP(:,44,:)));colormap(jet);title('oROI RESHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_RESHARP(:,44,:)));colormap(jet);title('iROI_RESHARP Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_PDF(:,44,:)));colormap(jet);title('oROI PDF image');axis equal
+>> figure;imagesc(squeeze(iROI_PDF(:,44,:)));colormap(jet);title('iROI PDF Intrinsic limit image');axis equal
 >> figure;imagesc(squeeze(structure.vol(44,:,:)));colormap(jet);title('T1-wighted structure image');axis equal
 >> figure;imagesc(squeeze(Fieldmap_brain(44,:,:)));colormap(jet);title('Original image');axis equal
->> figure;imagesc(squeeze(Fieldmap_purified(44,:,:)));colormap(jet);title('Purified image');axis equal
->> figure;imagesc(squeeze(Poisson_piece(44,:,:)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_vSHARP(44,:,:)));colormap(jet);title('oROI vSHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_vSHARP(44,:,:)));colormap(jet);title('Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_LBV(44,:,:)));colormap(jet);title('oROI LBV image');axis equal
+>> figure;imagesc(squeeze(iROI_LBV(44,:,:)));colormap(jet);title('iROI LBV Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_RESHARP(44,:,:)));colormap(jet);title('oROI RESHARP image');axis equal
+>> figure;imagesc(squeeze(iROI_RESHARP(44,:,:)));colormap(jet);title('iROI RESHARP Intrinsic limit image');axis equal
+>> figure;imagesc(squeeze(oROI_PDF(44,:,:)));colormap(jet);title('oROI PDF image');axis equal
+>> figure;imagesc(squeeze(iROI_PDF(44,:,:)));colormap(jet);title('iROI PDF Intrinsic limit image');axis equal
