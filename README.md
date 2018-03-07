@@ -44,11 +44,13 @@ Step 5
 7. >> convert_xfm -concat subj_T1_2stepflirt.mat -omat mag2mni305.mat magnitude_image_bet_Af01mt_2t1nii.gz.mat
 8. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -applyxfm -init mag2mni305.mat -out magnitude_image_bet_Af01mt_mni305.nii.gz -paddingsize 0.0 -interp trilinear -ref subj_T1_2stepflirt.nii.gz
 9. >> flirt -in Fieldmap.nii -applyxfm -init mag2mni305.mat -out Fieldmap_mni305.nii -paddingsize 0.0 -interp trilinear -ref subj_T1_2stepflirt.nii.gz
-10. >> bet subject_T1_2stepflirt subject_T1_2stepflirt_brain -R -f 0.4 -g 0 -m -t
-11. @ Linux/MAC, using Freesurfer
-12. >> mri_convert subject_T1_2stepflirt.nii.gz T1_2mm.nii
-13. >> mri_convert subject_T1_2stepflirt_brain_mask.nii.gz small_mask.nii
-14. >> mri_convert Fieldmap_mni305.nii.gz Fieldmap_mni305.nii
+10. >> flirt -in magnitude_image.nii -applyxfm -init mag2mni305.mat -out magnitude_image_2stepflirt.nii -paddingsize 0.0 -interp trilinear -ref subj_T1_2stepflirt.nii.gz
+11. >> bet subject_T1_2stepflirt subject_T1_2stepflirt_brain -R -f 0.4 -g 0 -m -t
+12. @ Linux/MAC, using Freesurfer
+13. >> mri_convert subject_T1_2stepflirt.nii.gz T1_2mm.nii
+14. >> mri_convert subject_T1_2stepflirt_brain_mask.nii.gz small_mask.nii
+15. >> mri_convert Fieldmap_mni305.nii.gz Fieldmap_mni305.nii
+16. >> mri_convert magnitude_image_2stepflirt.nii.gz magnitude_image_2stepflirt.nii
 
 
 Step 6
