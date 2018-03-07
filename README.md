@@ -38,15 +38,17 @@ Step 5
 1. @ Linux/MAC, using FSL toolbox
 2. >> flirt -in MNI305_T1_1mm.nii -ref MNI305_T1_2mm.nii -omat subject_T1_2stepflirt1.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
 3. >> flirt -in T1.nii -ref MNI305_T1_1mm.nii -omat subject_T1_2stepflirt2.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
-4. >> convert_xfm -concat subject_T1_2stepflirt1.omat -omat subject_T1_2stepflirt.mat subject_T1_2stepflirt2.mat
+4. >> convert_xfm -concat subject_T1_2stepflirt1.mat -omat subject_T1_2stepflirt.mat subject_T1_2stepflirt2.mat
 5. >> flirt -in T1.nii -ref MNI305_T1_2mm.nii -out subject_T1_2stepflirt.nii -applyxfm -init subject_T1_2stepflirt.mat -interp trilinear
-6. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -ref subject_T1_2stepflirt.nii.gz -out magnitude_image_bet_Af01mt_mni305.nii.gz -omat magnitude_image_bet_Af01mt_mni305.mat -bins 1024 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
-7. >> flirt -in Fieldmap.nii -applyxfm -init magnitude_image_bet_Af01mt_mni305.mat -out Fieldmap_mni305.nii -paddingsize 0.0 -interp trilinear -ref MNI305_T1_2mm.nii
-8. >> bet subject_T1_2stepflirt subject_T1_2stepflirt_brain -R -f 0.4 -g 0 -m -t
-9. @ Linux/MAC, using Freesurfer
-10. >> mri_convert subject_T1_2stepflirt.nii.gz T1_2mm.nii
-11. >> mri_convert subject_T1_2stepflirt_brain_mask.nii.gz small_mask.nii
-12. >> mri_convert Fieldmap_mni305.nii.gz Fieldmap_mni305.nii
+6. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -ref subj_T1.nii -out magnitude_image_bet_Af01mt_2t1nii.gz -omat magnitude_image_bet_Af01mt_2t1nii.gz.mat -bins 1024 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6 -interp trilinear
+7. >> convert_xfm -concat subj_T1_2stepflirt.mat -omat mag2mni305.mat magnitude_image_bet_Af01mt_2t1nii.gz.mat
+8. >> flirt -in magnitude_image_bet_Af01mt.nii.gz -applyxfm -init mag2mni305.mat -out magnitude_image_bet_Af01mt_mni305.nii.gz -paddingsize 0.0 -interp trilinear -ref subj_T1_2stepflirt.nii.gz
+9. >> flirt -in Fieldmap.nii -applyxfm -init mag2mni305.mat -out Fieldmap_mni305.nii -paddingsize 0.0 -interp trilinear -ref subj_T1_2stepflirt.nii.gz
+10. >> bet subject_T1_2stepflirt subject_T1_2stepflirt_brain -R -f 0.4 -g 0 -m -t
+11. @ Linux/MAC, using Freesurfer
+12. >> mri_convert subject_T1_2stepflirt.nii.gz T1_2mm.nii
+13. >> mri_convert subject_T1_2stepflirt_brain_mask.nii.gz small_mask.nii
+14. >> mri_convert Fieldmap_mni305.nii.gz Fieldmap_mni305.nii
 
 
 Step 6
