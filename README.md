@@ -1,6 +1,6 @@
 # The Intrinsic Limitation of Shim Coils Capability
 
-Written by:
+Created by:
 Pei-Yan, Li.
 Institute of Biomedical Engineering, 
 National Taiwan University.
