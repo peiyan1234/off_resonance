@@ -1,4 +1,4 @@
-# The Intrinsic Limitation of Shim Coils Capability
+# SVD shimming and Spherical Harmonic shimming
 
 Created by:
 Pei-Yan, Li.
