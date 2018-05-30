@@ -55,6 +55,6 @@ Step 5
 
 Step 6
 1. @ Linux/MAC/Win10, Matlab
->> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask')
->> groupanalysis
->> SVD_and_SH_shimming
+>> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask');
+>> groupanalysis;
+>> SVD_and_SH_shimming;
