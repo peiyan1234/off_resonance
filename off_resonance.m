@@ -12,7 +12,7 @@ function off_resonance(flag_raw,raw_name,N,TE1,TE2,flag_brainmask,flag_BESTPATH_
 % flag_Laplacian_unwrap == 0 or 1; Using Laplacian phase unwrapping algorithm, or not.
 % Either BEST-PATH unwrapping algorithm or Laplacian unwrapping algorithm,
 % do not use both of them at the same time.
-% Written by:
+% Created by:
 %   Pei-Yan, Li
 %   Institute of Biomedical Engineering,
 %   National Taiwan University
