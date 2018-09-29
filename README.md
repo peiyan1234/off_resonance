@@ -1,4 +1,4 @@
-# Shimming based on off-resonance fields
+# Shimming based on off-resonance field analyses
 
 Created by:
 Pei-Yan, Li.
