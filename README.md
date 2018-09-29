@@ -6,7 +6,7 @@ Institute of Biomedical Engineering,
 National Taiwan University.
 d05548014@ntu.edu.tw
 
-This README file decribes the preprocess of a measured raw data before further analysis.
+This README file decribes the preprocess of a measured raw data before further analyses.
 
 Processing environments: 
 1. Matlab (R2018a, at Win10-64 bits, https://www.mathworks.com/?s_tid=gn_logo), 
