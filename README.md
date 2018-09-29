@@ -15,27 +15,27 @@ Processing environments:
 
 Step 1
 1. meas_sample_AdjGre.dat can be downloaded at here: https://goo.gl/aotPQr and https://goo.gl/gZ1ZgZ
-2. @ Linux/MAC/Win10, Matlab
+2. @ Linux/MAC/Win10, by Matlab
 3. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0); 
 
 Step 2
-1. @ Linux/MAC, using FSL toolbox
+1. @ Linux/MAC, by FSL toolbox
 2. >> bet magnitude_image.nii magnitude_image_bet_Af01mt -A -f 0.1 -m -t
 3. @ Linux, using Freesurfer toolbox
 4. >> mri_convert magnitude_image_bet_Af01mt_mask.nii.gz big_mask.nii
 
 Step 3
-1. @ Linux/MAC/Win10, Matlab
+1. @ Linux/MAC/Win10, by Matlab
 2. >> off_resonance(0,'meas_sample_AdjGre',32,0.002,0.00446,1,0,1);
 
 Step 4
 1. MPRAGE_sample (#0001~#0192) can be downloaded at here: https://goo.gl/aotPQr and https://goo.gl/gZ1ZgZ
-2. @ Linux/MAC, using Freesurfer toolbox
+2. @ Linux/MAC, by Freesurfer toolbox
 3. >> recon-all -all -i sample.0001.IMA -subject subject_recon
 4. >> mri_convert subject_recon/mri/T1.mgz T1.nii
 
 Step 5
-1. @ Linux/MAC, using FSL toolbox
+1. @ Linux/MAC, by FSL toolbox
 2. >> flirt -in MNI305_T1_1mm.nii -ref MNI305_T1_2mm.nii -omat subject_T1_2stepflirt1.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
 3. >> flirt -in T1.nii -ref MNI305_T1_1mm.nii -omat subject_T1_2stepflirt2.mat -bins 1024 -cost normcorr -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 6
 4. >> convert_xfm -concat subject_T1_2stepflirt1.mat -omat subject_T1_2stepflirt.mat subject_T1_2stepflirt2.mat
@@ -54,5 +54,5 @@ Step 5
 
 
 Step 6
-1. @ Linux/MAC/Win10, Matlab
+1. @ Linux/MAC/Win10, by Matlab
 >> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask');
