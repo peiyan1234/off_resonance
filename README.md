@@ -1,4 +1,4 @@
-# SVD shimming and Spherical Harmonic shimming
+# Shimming based on off-resonance fields
 
 Created by:
 Pei-Yan, Li.
