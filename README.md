@@ -1,4 +1,4 @@
-# Shimming based on off-resonance field analyses
+# B0 maps preprocessing
 
 Created by:
 Pei-Yan, Li.
