@@ -49,4 +49,4 @@ Step 7, 8 @Linux shell
 
 Step 9
 1. @ Linux/MAC/Win10, by Matlab
->> analyze_offresonance_sources('Fieldmap_mni305','T1_2mm','small_mask');
+>> analyze_offresonance_sources('rFieldmap_translated','rrT1_2mm_translated.nii','small_mask');
