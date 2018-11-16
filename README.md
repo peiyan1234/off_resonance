@@ -19,32 +19,32 @@ Step 1
 3. >> off_resonance(1,'meas_sample_AdjGre',32,0.002,0.00446,0,0,0); 
 
 Step 2 @Linux shell
-1> chmod 755 Freesurfer_source.sh
-2> source Freesurfer_source.sh
-3> chmod 755 Step2_1.sh
-4> chmod 755 Step2_2.sh
-5> ./Step2_1.sh
-6> ./Step2_2.sh
+>> chmod 755 Freesurfer_source.sh
+>> source Freesurfer_source.sh
+>> chmod 755 Step2_1.sh
+>> chmod 755 Step2_2.sh
+>> ./Step2_1.sh
+>> ./Step2_2.sh
 
 Step 3
 1. @ Linux/MAC/Win10, by Matlab
 2. >> off_resonance(0,'meas_sample_AdjGre',32,0.002,0.00446,1,0,1);
 
 Step 4 @Linux shell
-1> chmod 755 Step4.sh
-2> ./Step4.sh
+>> chmod 755 Step4.sh
+>> ./Step4.sh
 
 Step 5 @Linux shell
-1> chmod 755 Step5.sh
-2> ./Step5.sh
+>> chmod 755 Step5.sh
+>> ./Step5.sh
 
 Step 6 @Matlab
-1> Step6_orientation;
+>> Step6_orientation;
 
 Step 7, 8 @Linux shell
-1> chmod 755 Step7.sh
-2> chmod 755 Step8.sh
-3> ./Step7.sh
+>> chmod 755 Step7.sh
+>> chmod 755 Step8.sh
+>> ./Step7.sh
 4> ./Step8.sh
 
 Step 9
